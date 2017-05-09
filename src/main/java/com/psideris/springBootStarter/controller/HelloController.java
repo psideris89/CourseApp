@@ -1,4 +1,4 @@
-package com.psideris.springBootStarter.controllers;
+package com.psideris.springBootStarter.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

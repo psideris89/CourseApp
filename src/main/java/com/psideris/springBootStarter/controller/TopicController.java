@@ -1,4 +1,4 @@
-package com.psideris.springBootStarter.controllers;
+package com.psideris.springBootStarter.controller;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.psideris.springBootStarter.entities.Topic;
-import com.psideris.springBootStarter.services.TopicService;
+import com.psideris.springBootStarter.model.Topic;
+import com.psideris.springBootStarter.service.TopicService;
 
 @RestController
 public class TopicController {

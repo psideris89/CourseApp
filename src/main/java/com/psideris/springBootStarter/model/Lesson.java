@@ -1,4 +1,4 @@
-package com.psideris.springBootStarter.entities;
+package com.psideris.springBootStarter.model;
 
 public class Lesson {
 

@@ -1,4 +1,4 @@
-package com.psideris.springBootStarter.services;
+package com.psideris.springBootStarter.service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,10 +6,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.psideris.springBootStarter.entities.Topic;
+import com.psideris.springBootStarter.model.Topic;
 
 @Service
-public class TopicService {
+public class CourseService {
 
 	/*
 	 * TODO
