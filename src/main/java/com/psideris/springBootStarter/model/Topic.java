@@ -1,10 +1,14 @@
 package com.psideris.springBootStarter.model;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-@Component
+//import org.springframework.data.annotation.Id;
+
+@Entity
 public class Topic {
 
+	@Id
 	private String id;
 	private String name;
 	private String description;
