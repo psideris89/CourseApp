@@ -1,5 +1,8 @@
 package com.psideris.springBootStarter.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Course {
 
 	private String id;
