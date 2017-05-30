@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.psideris.springBootStarter.model.Topic;
+import com.psideris.springBootStarter.repository.TopicRepository;
 
 @Service
 public class TopicService {
@@ -15,6 +17,10 @@ public class TopicService {
 	 * TODO
 	 * Take topics from Database!!
 	 */
+	
+	@Autowired
+	private TopicRepository topicRepository;
+	
 	private List<Topic> topics = new ArrayList<>(Arrays.asList(
 				new Topic("spring", "Spring Framework", "Spring Framework Description"),
 				new Topic("java", "Java SE 8", "Java SE 8 Description"),
@@ -28,6 +34,8 @@ public class TopicService {
 	}
 	
 	public List<Topic> getAllTopics() {
+		List<Topic> topics = new ArrayList<>();
+		topicRepository.findAll().forEach(e -> topics.add(e));
 		return topics;
 	}
 	
@@ -40,7 +48,7 @@ public class TopicService {
 	}
 	
 	public void addTopic(Topic topic) {
-		topics.add(topic);
+		topicRepository.save(topic);
 	}
 	
 	public void updateTopic(String id, Topic topic) {
